@@ -7,9 +7,12 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
+    hljs: {
+      theme: 'night-owl'
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -74,7 +77,12 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-highlightjs")],
+  safelist: [
+    {
+      pattern: /hljs+/
+    }
+  ]
 } satisfies Config
 
 export default config

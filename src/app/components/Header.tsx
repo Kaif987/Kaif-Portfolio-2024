@@ -28,7 +28,7 @@ export default function Header() {
     const isActive = (href: string) => href === pathname
 
     return (
-        <nav className="mx-auto max-w-6xl flex items-center justify-between py-4">
+        <nav className="flex items-center justify-between py-4">
             <ul className="flex gap-4">
                 {PAGES.map(page => {
                     return <Link href={page.href} key={page.href} className={cn("text-sm",

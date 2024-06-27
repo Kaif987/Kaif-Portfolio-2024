@@ -27,11 +27,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <div className="mx-auto flex min-h-screen max-w-6xl flex-col">
-            {children}
+          <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-6">
+            <Header />
+            <div className="grow">
+              {children}
+            </div>
+            <Footer />
           </div>
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

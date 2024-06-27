@@ -2,7 +2,7 @@ import Activity from "./Activity";
 
 export default function Hero() {
     return (
-        <div className="flex items-center justify-between py-20">
+        <div className="flex flex-col items-center md:flex-row py-28">
             <div className="flex flex-col">
                 <div>
                     <h1 className="text-4xl font-bold dark:text-slate-200">Kaif Mohammad</h1>
@@ -19,7 +19,9 @@ export default function Hero() {
                 </div> */}
                 <Activity />
             </div>
-            <img src="/kaif.jpeg" alt="profile-image" className="h-96" />
+            <div className="h-96 mt-8 md:mt-0 md:ml-8">
+                <img src="/kaif.jpeg" alt="profile-image" className="h-full w-full block rounded-full" />
+            </div>
         </div>
     )
 }

@@ -10,7 +10,7 @@ export default function GetInTouch() {
   const [state, handleSubmit] = useForm("xwpeewej");
 
   return (
-    <div className="flex justify-center items-center px-4 py-8">
+    <div className="flex justify-center items-center px-4 pt-8 min-h-screen">
       <div className='flex flex-col items-center max-w-4xl w-full'>
         <div>
           <span className='text-2xl'>What's next ?</span>

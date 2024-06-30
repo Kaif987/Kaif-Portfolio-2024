@@ -56,20 +56,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const MDXContent = dynamic(() => import(`../../../../writings/${slug}.mdx`));
 
     return (
-        <div className="flex min-h-screen flex-col items-center gap-12 sm:gap-24 p-6 sm:p-24  ">
-            <div className="pb-10">
-                <Link href="/">{`<- Home`}</Link>
+        <article className="pt-6">
+            <div className="pb-8">
+                <h1 className="text-6xl font-black pb-4">{post.metadata.title}</h1>
+                <p>
+                    Published on:{" "}
+                    {new Date(post.metadata.publishDate).toLocaleDateString()}
+                </p>
             </div>
-            <article className="">
-                <div className="pb-8">
-                    <h1 className="text-6xl font-black">{post.metadata.title}</h1>
-                    <p>
-                        Published on:{" "}
-                        {new Date(post.metadata.publishDate).toLocaleDateString()}
-                    </p>
-                </div>
-                <MDXContent />
-            </article>
-        </div>
+            <MDXContent />
+        </article>
     );
 }

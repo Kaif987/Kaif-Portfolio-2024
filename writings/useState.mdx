@@ -1,0 +1,64 @@
+
+export const metadata = {
+  title: "What is useState",
+  publishDate: "2024-06-27",
+};
+
+# useState
+
+One of the most common thing that you will encounter in react is the `useState` function. 
+but what is `useState`?
+
+# Declarative and Imperative programming 
+
+There are two mainly two type of programming paradigms. They are
+  ## Imperative programming:
+    Imperative programming is when you tell how to do a specific thing. for example
+    if you have to log hello world everytime a button is clicked in javascript, you would do something like 
+    this:
+
+    ```javascript
+        const button = document.querySelector("#button")
+
+        button.addEventListener("click", () =>{
+          console.log("hello world")
+        })
+    ```
+
+  ## Declarative programming: 
+    Declarative programming is when you tell what to do. If you had to log hello world 
+    everytime a button is click in React. you would do something like:
+
+    ```javascript
+      import React from "react"    
+
+      export default function Button() {
+        return (
+        <button onClick = {() => console.log("hello world")}>
+          click
+        </button>)
+      }
+    ```
+
+    This might seem complicated for some new folks and seem like a lot of code for a beginner.
+    but the thing to take away from this is that with React I did not have to tell my js compiler
+    "how to log when the button is click ?" just "what to do when the button is clicked ?". With React you can focus on the core logic of your application and leave 
+    the "how" on React.
+
+    Now coming to the topic. what is useState ?
+
+    `useState` adds state to your component.
+
+    syntax:
+    <br/>
+      ``` javascript
+        const [state, setState] = useState(initialState)
+      ```
+
+Here, the initialValue is the value you want to start with, and state is the current state value that can be used in your component. The setState function can be used to update the state, triggering a re-render of your component
+
+`useState` is React Hook that allows you to add state to a functional component. It returns an array with two values: the current state and a function to update it. The Hook takes an initial state value as an argument and returns an updated state value whenever the setter function is called. It can be used like this:
+<br/>
+
+   
+

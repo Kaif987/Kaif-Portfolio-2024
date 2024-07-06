@@ -1,0 +1,64 @@
+export const metadata = {
+  title: "What is Langchain",
+  publishDate: "2024-07-06",
+};
+
+# Langchain
+LangChain is an open source framework that lets software developers working with artificial intelligence (AI) and its machine learning subset combine large language models with other external components to develop LLM-powered applications. It allows developer to create Software that use LLM under the hood without requiring much knowledge of how the llm works. 
+<br/>
+
+# Chain
+
+Chains are usually the interconnected components that take input, process that input and then pass it onto the next chain. Chain are sequence of calls that either to an LLM or to a tool.  The way to make a chain is to use Langchain Expression Langugage (LCEL). for example, you can create a chain by creating a ChatTemplate (prompt) and then pass that prompt to the a llm model. This can be a chain. you can further create a longer chain by adding a output parser to the chain. Output parser are used to change output of a LLM into different forms like JSON, strings, objects etc.
+
+<br/>
+![Chain images](https://images.unsplash.com/photo-1579458342405-52d7d969e0d4?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+<br/>
+
+# Links
+Each step in the chaining process is a link. you can think of creating a prompt template as a link in the chain, and creating a output parser as another link.
+<br/>
+
+# Prompts
+Prompts are the input that allow developers to enhance that output from an LLM. for example you can tell an LLM to behave like a agent named max by giving prompt like
+<br/>
+
+```
+ you are a helpful agent called max. 
+ user question: {input}
+```
+<br/>
+Now the LLM will behave like max. Here the `{input}` placeholder is used to pass the input from the user.
+
+# Agent
+Agents are another component in the langchain which is different from chain. With chains you are telling exactly what steps to take when giving the user output but with agent the llm is free to take whatever step it wants. The agent has access to user question and a list of tools that allows the agent to give an output to the user. For example a common tool can be a retriever tool that allows the agent to retrieve data from a external data source. you describe the name and what the tool does, to the agent. if the user asks data from the external data source, the langchain agent will use the retriever tool to answer the user's question. 
+
+Langchain is easy to install and has a lot of community support. 
+
+<br/>
+# How to install langchain in a nodejs project
+
+In your terminal run the following command.
+
+```javascript
+npm init -y
+npm install @langchain/openai
+```
+
+Now to run a langchain model, you need an API key from chatopenai. you can get your API key from [here](https://platform.openai.com/api-keys)
+
+let's create a model and then invoke it using langchain.
+
+```javascript
+import { ChatOpenAI } from "@langchain/openai";
+
+const model = new ChatOpenAI({
+    apiKey: <your-api-key>,
+    modelName: 'gpt-3.5-turbo',
+})
+
+const response = await model.invoke("Write a poem about AI")
+console.log(response)
+
+```
+

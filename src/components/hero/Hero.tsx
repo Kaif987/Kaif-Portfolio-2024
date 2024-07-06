@@ -1,8 +1,9 @@
-import Activity from "./Activity";
+import Activity from "../../app/components/Activity";
+import Avatar from "./avatar"
 
 export default function Hero() {
     return (
-        <div className="flex flex-col items-center md:flex-row py-28">
+        <div className="flex flex-col items-center justify-between md:flex-row py-28">
             <div className="flex flex-col">
                 <div>
                     <h1 className="text-4xl font-bold dark:text-slate-200">Kaif Mohammad</h1>
@@ -17,11 +18,9 @@ export default function Hero() {
                         <p>Over a decade of experience building products for clients across several countries.</p>
                     </div>
                 </div> */}
-                <Activity />
+                {/* <Activity /> */}
             </div>
-            <div className="h-96 mt-8 md:mt-0 md:ml-8">
-                <img src="/kaif.jpeg" alt="profile-image" className="h-full w-full block rounded-full" />
-            </div>
+            <Avatar />
         </div>
     )
 }

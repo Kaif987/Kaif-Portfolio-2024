@@ -13,7 +13,7 @@ export default function GetInTouch() {
     <div className="flex justify-center items-center px-4 pt-8 min-h-screen">
       <div className='flex flex-col items-center max-w-4xl w-full'>
         <div>
-          <span className='text-2xl'>What's next ?</span>
+          <span className='text-2xl'>What&apos;s next ?</span>
         </div>
         <div>
           <h1 className='text-4xl md:text-6xl font-bold py-6 dark:text-slate-300'>Get In Touch</h1>

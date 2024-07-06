@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 
 type ProjectCardType = {
     name: string,
@@ -13,7 +14,7 @@ type ProjectCardType = {
 export default function ProjectCard({ name, href, languages, description, image_url }: ProjectCardType) {
     return (
         <div className='relative card rounded-lg overflow-hidden w-96'>
-            <img src={image_url} className='rounded-lg' />
+            <Image src={image_url} alt='project image' width={0} height={0} sizes="100vw" className='w-full h-full rounded-lg' />
             <span className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white bg-slate-900 opacity-80 px-4 py-2 rounded text-2xl text-center font-bold '>{name}</span>
             <div className='description'>
                 <div className='absolute inset-0 bg-sky-950 px-5 text-center flex flex-col justify-center items-center'>
@@ -26,7 +27,7 @@ export default function ProjectCard({ name, href, languages, description, image_
                     </div>
                     <div className='flex gap-3 text-white mt-8'>
                         {languages.map(language => {
-                            return <span className='bg-gray-600 px-2 py-1 rounded'>{language}</span>
+                            return <span key={language} className='bg-gray-600 px-2 py-1 rounded'>{language}</span>
                         })}
                     </div>
                 </div>

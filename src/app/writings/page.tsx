@@ -45,8 +45,8 @@ export default async function Home() {
                 <h2 className="text-4xl font-bold mb-8 underline underline-offset-8 ">Writings</h2>
                 <ul className="space-y-4">
                     {posts.map((post) => (
-                        <Card className="transition-all duration-300 hover:border-ring">
-                            <li key={post.slug} className="">
+                        <Card key={post.slug} className="transition-all duration-300 hover:border-ring">
+                            <li className="">
                                 <Link className="" href={`/writings/${post.slug}`}>
                                     <CardHeader>
                                         <CardTitle>

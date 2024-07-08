@@ -3,7 +3,7 @@ import { SquareCode, Server, Database } from "lucide-react";
 
 export default function Skills() {
     return (
-        <div className="flex flex-col justify-center gap-5 p-10 w-full sm:flex-row">
+        <div className="flex flex-col justify-center gap-5 mt-11 w-full sm:flex-row">
             <Card className="w-full flex flex-col items-center justify-center">
                 <CardHeader>
                     <div className="flex flex-col items-center gap-2">

@@ -13,7 +13,7 @@ type ProjectCardType = {
 
 export default function ProjectCard({ name, href, languages, description, image_url }: ProjectCardType) {
     return (
-        <div className='relative card rounded-lg overflow-hidden w-96'>
+        <div className='relative card rounded-lg overflow-hidden w-96 px-3'>
             <Image src={image_url} alt='project image' width={0} height={0} sizes="100vw" className='w-full h-full rounded-lg' />
             <span className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white bg-slate-900 opacity-80 px-4 py-2 rounded text-2xl text-center font-bold '>{name}</span>
             <div className='description'>

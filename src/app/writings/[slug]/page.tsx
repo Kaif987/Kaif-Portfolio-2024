@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import dynamic from "next/dynamic";
 import type { Metadata, ResolvingMetadata } from "next";
-import Link from "next/link";
+import ScrollProgress from "@/components/ui/scroll-progress";
 
 type Props = {
     params: { slug: string };
@@ -49,6 +49,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
+    // const { scrollYProgress } = useScroll()
     const { slug } = params;
 
     const post = await getPost(params);
@@ -56,15 +57,18 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const MDXContent = dynamic(() => import(`../../../../writings/${slug}.mdx`));
 
     return (
-        <article className="pt-6">
-            <div className="pb-8">
-                <h1 className="text-6xl font-black pb-4">{post.metadata.title}</h1>
-                <p>
-                    Published on:{" "}
-                    {new Date(post.metadata.publishDate).toLocaleDateString()}
-                </p>
-            </div>
-            <MDXContent />
-        </article>
+        <>
+            <ScrollProgress />
+            <article className="pt-6">
+                <div className="pb-8">
+                    <h1 className="text-6xl font-black pb-4">{post.metadata.title}</h1>
+                    <p>
+                        Published on:{" "}
+                        {new Date(post.metadata.publishDate).toLocaleDateString()}
+                    </p>
+                </div>
+                <MDXContent />
+            </article>
+        </>
     );
 }

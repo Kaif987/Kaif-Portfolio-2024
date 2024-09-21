@@ -1,17 +1,17 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
     hljs: {
-      theme: 'night-owl'
+      theme: "night-owl",
     },
     container: {
       center: true,
@@ -77,12 +77,18 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("tailwind-highlightjs")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwind-highlightjs"),
+    require("@assistant-ui/react/tailwindcss")({
+      components: ["assistant-modal"],
+    }),
+  ],
   safelist: [
     {
-      pattern: /hljs+/
-    }
-  ]
-} satisfies Config
+      pattern: /hljs+/,
+    },
+  ],
+} satisfies Config;
 
-export default config
+export default config;

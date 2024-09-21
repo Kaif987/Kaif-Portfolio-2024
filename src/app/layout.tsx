@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,9 +30,7 @@ export default function RootLayout({
         >
           <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-6">
             <Header />
-            <div className="grow">
-              {children}
-            </div>
+            <div className="grow">{children}</div>
             <Footer />
           </div>
         </ThemeProvider>

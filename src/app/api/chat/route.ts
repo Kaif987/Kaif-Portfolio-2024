@@ -1,5 +1,4 @@
 import { LangChainAdapter, Message } from "ai";
-import "cheerio";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { ChatGroq } from "@langchain/groq";

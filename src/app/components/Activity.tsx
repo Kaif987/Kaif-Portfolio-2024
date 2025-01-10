@@ -53,7 +53,6 @@ async function getGithubData(): Promise<GithubCommit | null> {
 export default async function Activity() {
     const githubData = await getGithubData()
 
-    console.log(githubData)
 
     return (
         <div className="flex items-center flex-col gap-4 pt-16 sm:flex-row">

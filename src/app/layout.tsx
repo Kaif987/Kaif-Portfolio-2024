@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kaif Mohd: Full Stack Developer",
-  description: "",
+  description:
+    "Web Developer specializing in creating Landing pages for businesses | Next.js | React.js | Tailwind.css",
   icons: "/favicon-16x16.png",
 };
 

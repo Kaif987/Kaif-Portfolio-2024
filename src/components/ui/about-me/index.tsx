@@ -7,7 +7,7 @@ export default function AboutMe() {
             <p className="p-5 text-lg">Hello my name is Mohammad Kaif and I enjoy creating things that live on
                 the internet. I was introduced to programming (QBASIC) back in 2016 and I fell in love
                 with programming ever since.
-
+        
                 Fast forward to now, I now work remotely trying to solve business related problems for
                 my clients.
             </p>

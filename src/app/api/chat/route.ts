@@ -98,7 +98,7 @@ Project Links:
     Campus Tutor: https://campus-tutor.vercel.app/`;
 
   const llm = new ChatGroq({
-    model: "mixtral-8x7b-32768",
+    model: "mistral-saba-24b",
     temperature: 0.7,
     streaming: true,
   });
